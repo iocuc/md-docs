@@ -5,6 +5,7 @@ import VitePluginMarkdown from './plugins/markdown';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/', // 确保使用正确的基础路径
   plugins: [
     vue({ include: [/\.vue$/, /\.md$/] }),
     VitePluginMarkdown(),
