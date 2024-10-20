@@ -1,0 +1,28 @@
+/* 锚链接 */
+.anchor-link {
+  text-decoration: none !important;
+  margin-right: 5px;
+  font-size: 0.8em;
+}
+
+/* 代码复制按钮 */
+.code-block {
+  position: relative;
+}
+
+.copy-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.copy-btn:hover {
+  background-color: #0056b3;
+}
