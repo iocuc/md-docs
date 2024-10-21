@@ -26,3 +26,7 @@ function hello() {
   font: 12px bold "yahei";
 }
 ```
+
+```shell
+mkdir abc
+```

@@ -3,23 +3,63 @@
 }
 
 /* 代码复制按钮 */
-.code-block {
+pre {
   position: relative;
 }
 
-.code-block-copy {
+.m-mdic-copy-wrapper {
   position: absolute;
-  right: 10px;
-  top: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 5px;
-  cursor: pointer;
-  border-radius: 3px;
-  font-size: 12px;
+  top: 16px;
+  right: 16px;
 }
 
-.code-block-copy:hover {
-  background-color: #0056b3;
+.m-mdic-copy-wrapper span.u-mdic-copy-code_lang {
+  position: absolute;
+  top: 3px;
+  right: calc(100% + 4px);
+  font-family: system-ui;
+  font-size: 12px;
+  line-height: 18px;
+  color: #666;
+  opacity: 0.3;
+}
+
+.m-mdic-copy-wrapper div.u-mdic-copy-notify {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  padding: 3px 6px;
+  border: 0;
+  border-radius: 3px;
+  background: none;
+  font-family: system-ui;
+  font-size: 12px;
+  line-height: 18px;
+  color: #ccc;
+  outline: none;
+  opacity: 1;
+  padding-right: 4px;
+}
+
+.m-mdic-copy-wrapper button.u-mdic-copy-btn {
+  position: relative;
+  top: 0;
+  right: 0;
+  padding: 3px 6px;
+  border: 0;
+  border-radius: 3px;
+  background: none;
+  font-family: system-ui;
+  font-size: 12px;
+  line-height: 18px;
+  color: #666;
+  opacity: 0.3;
+  outline: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.m-mdic-copy-wrapper button.u-mdic-copy-btn:hover {
+  opacity: 1;
 }
