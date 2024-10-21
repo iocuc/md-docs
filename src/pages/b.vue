@@ -1,3 +1,8 @@
+<template>
+  <p>Hello I am B</p>
+  <img src="../assets/test.jpg" alt="">
+</template>
+
 <script lang="ts">
 import { useHead } from '@unhead/vue'
 
@@ -24,8 +29,3 @@ export default {
   },
 }
 </script>
-
-<template>
-  <p>Hello I am B</p>
-  <img src="../assets/test.jpg" alt="">
-</template>

@@ -1,3 +1,7 @@
+<template>
+  <div>{{ x }} x {{ y }}</div>
+</template>
+
 <script setup lang="ts">
 import { ref } from 'vue'
 
@@ -9,7 +13,3 @@ window.addEventListener('mousemove', (e) => {
   y.value = e.y
 })
 </script>
-
-<template>
-  <div>{{ x }} x {{ y }}</div>
-</template>

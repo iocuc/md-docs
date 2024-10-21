@@ -1,0 +1,25 @@
+.app-main {
+  padding: 4em 10em;
+}
+
+/* 代码复制按钮 */
+.code-block {
+  position: relative;
+}
+
+.code-block-copy {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.code-block-copy:hover {
+  background-color: #0056b3;
+}
