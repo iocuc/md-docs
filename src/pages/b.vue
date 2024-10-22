@@ -9,7 +9,7 @@ import { useHead } from '@unhead/vue'
 export default {
   setup() {
     useHead({
-      title: 'Hello',
+      title: 'Page B',
       meta: [
         {
           name: 'description',

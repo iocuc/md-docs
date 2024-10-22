@@ -44,7 +44,9 @@
 }
 .app-header__content {
   position: relative;
-  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
   height: var(--app-header-height);
   white-space: nowrap;
   border-bottom: 1px solid #ccc;
@@ -75,5 +77,9 @@
 .app-main__content {
   padding: 32px 32px var(--app-padding-bottom);
   background-color: var(--app-backgroud-color);
+}
+
+.app-main__content img {
+  max-width: 100%;
 }
 </style>
