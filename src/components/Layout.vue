@@ -1,0 +1,79 @@
+<template>
+  <div class="app-layout app-layout--vars">
+    <!-- 头部 -->
+    <header class="app-header">
+      <div class="app-header__content">
+        <slot name="header"></slot>
+      </div>
+    </header>
+
+    <!-- 左边栏 -->
+    <aside class="app-sidebar customize-scrollbar">
+      <div class="app-sidebar__content">
+        <slot name="sidebar"></slot>
+      </div>
+    </aside>
+
+    <!-- 内容 -->
+    <main class="app-main">
+      <div class="app-main__content">
+        <slot name="main"></slot>
+      </div>
+    </main>
+  </div>
+</template>
+
+<style>
+.app-layout--vars {
+  --app-header-height: 64px;
+  --app-sidebar-width: 256px;
+  --app-padding-bottom: 64px;
+  --app-backgroud-color: #fff;
+}
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+}
+.app-header__content {
+  position: relative;
+  padding: 0 32px;
+  height: var(--app-header-height);
+  white-space: nowrap;
+  border-bottom: 1px solid #ccc;
+  background-color: var(--app-backgroud-color);
+}
+.app-sidebar {
+  position: fixed;
+  top: var(--app-header-height);
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: var(--app-sidebar-width);
+  max-width: 100%;
+  border-right: 1px solid #ccc;
+  transform: translate(0);
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: border-color .5s,background-color .5s;
+}
+.app-sidebar__content {
+  padding: 0 16px var(--app-padding-bottom) 16px;
+  background-color: var(--app-backgroud-color);
+}
+.app-main {
+  padding-top: var(--app-header-height);
+  padding-left: var(--app-sidebar-width);
+}
+.app-main__content {
+  padding: 32px 32px var(--app-padding-bottom);
+  background-color: var(--app-backgroud-color);
+}
+</style>
