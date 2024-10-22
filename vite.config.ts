@@ -1,4 +1,5 @@
 import type { UserConfig } from 'vite';
+import path from 'path';
 import Vue from '@vitejs/plugin-vue';
 import Pages from 'vite-plugin-pages';
 import Markdown from 'unplugin-vue-markdown/vite';
@@ -18,6 +19,11 @@ const copyOptions = {
 };
 
 const config: UserConfig = {
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
   plugins: [
     // 支持 .vue 和 .md 文件
     Vue({ include: [/\.vue$/, /\.md$/] }),
