@@ -8,7 +8,9 @@
     <span class="header-search__text">搜索</span>
     <span class="header-search__key">Crtl+K</span>
   </button>
-  <div class="header-nav"></div>
+  <div class="header-nav">
+    {{ isLoading }}
+  </div>
   <div class="header-toolbar">
     <a class="header-link" target="_blank" href="https://github.com/iocuc/md-docs">
       <IconGithub />
@@ -20,6 +22,9 @@
 import LogoImg from '@/assets/test.jpg';
 import IconSearch from '@/components/icon/IconSearch.vue';
 import IconGithub from '@/components/icon/IconGithub.vue';
+import { useRouteLoading } from '@/composables/useGuard';
+
+const isLoading = useRouteLoading();  // 路由加载状态
 </script>
 
 <style>
@@ -68,6 +73,7 @@ import IconGithub from '@/components/icon/IconGithub.vue';
 }
 .header-toolbar {
   display: flex;
+  align-items: end;
 }
 .header-link {
   color: rgba(0, 0, 0, 0.6);

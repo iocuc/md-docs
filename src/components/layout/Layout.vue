@@ -8,7 +8,7 @@
     </header>
 
     <!-- 左边栏 -->
-    <aside class="app-sidebar customize-scrollbar">
+    <aside class="app-sidebar">
       <div class="app-sidebar__content">
         <slot name="sidebar"></slot>
       </div>
