@@ -20,9 +20,6 @@ export function useRouteGuard(ctx: ViteSSGContext) {
 
 // 获取路由加载状态
 export function useRouteLoading() {
-  // 获取当前组件实例
-  const { appContext } = getCurrentInstance()!;
-
-  // 通过 computed 返回响应式的 $isLoading 状态
+  const { appContext } = getCurrentInstance()!; // 获取当前组件实例
   return computed(() => appContext.config.globalProperties.$isLoading?.value);
 }
