@@ -10,7 +10,7 @@ import { useRouteLoading } from '@/composables/useGuard';
 
 let interval = null;
 const delay = 300;      // 延迟重置时间
-const maxPercent = 80;  // 模拟的最大进度
+const maxPercent = 75;  // 模拟的最大进度
 
 // 加载状态
 const isLoading = useRouteLoading();  
@@ -49,7 +49,7 @@ function complete() {
 }
 .app-progress__bar {
   height: 100%;
-  background-color: blue;
+  background-color: #6aa6eb;;
   transition: width 0.3s ease;
 }
 .app-progress--disabled {
