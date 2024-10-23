@@ -29,11 +29,13 @@
   --app-sidebar-width: 256px;
   --app-padding-bottom: 64px;
   --app-backgroud-color: #fff;
+  /* --app-backgroud-color: #1a1a1a; */
 }
 .app-layout {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: var(--app-backgroud-color);
 }
 .app-header {
   position: fixed;
@@ -76,9 +78,7 @@
 }
 .app-main__content {
   padding: 32px 32px var(--app-padding-bottom);
-  background-color: var(--app-backgroud-color);
 }
-
 .app-main__content img {
   max-width: 100%;
 }
