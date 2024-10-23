@@ -1,3 +1,12 @@
+#app {
+  --app-header-top: 3px;
+  --app-header-height: 64px;
+  --app-sidebar-width: 256px;
+  --app-padding-bottom: 64px;
+  --app-backgroud-color: #fff;
+  /* --app-backgroud-color: #1a1a1a; */
+}
+
 /* 图标 */
 .icon {
   --icon-size: 24px;
@@ -26,26 +35,26 @@
 
 /* 滚动条美化 */
 .customize-scrollbar::-webkit-scrollbar {
-  width: 12px;  /* 宽度（垂直滚动条） */
-  height: 12px; /* 高度（水平滚动条） */
+  width: 12px;
+  height: 12px;
 }
 
 /* 滚动条的滑块（滚动条中的滚动块） */
 .customize-scrollbar::-webkit-scrollbar-thumb {
-  background: #888;       /* 滑块颜色 */
-  border-radius: 6px;       /* 圆角 */
-  border: 2px solid #fff; /* 滑块内边距颜色 */
+  background: #888;
+  border-radius: 6px;
+  border: 2px solid #fff;
 }
 
 /* 鼠标悬停时的滑块 */
 .customize-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #555; /* 悬停时的颜色 */
+  background: #555;
 }
 
 /* 滚动条轨道（滑块所在区域） */
 .customize-scrollbar::-webkit-scrollbar-track {
-  background: #f1f1f1;  /* 轨道颜色 */
-  border-radius: 6px;     /* 圆角 */
+  background: #f1f1f1;
+  border-radius: 6px;
 }
 
 /* 轨道中的边框或内边距（可选） */
