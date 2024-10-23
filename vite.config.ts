@@ -14,7 +14,7 @@ const copyOptions = {
   successTextDelay: 500, // 复制成功文本延迟消失时间
   extraHtmlBeforeBtn: '', 
   extraHtmlAfterBtn: '',
-  showCodeLanguage: false, 
+  showCodeLanguage: true, 
   attachText: '',  // 附加到复制的内容后的文字，比如版权信息
 };
 
