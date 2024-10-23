@@ -1,5 +1,8 @@
 <template>
-  <div class="app-layout app-layout--vars">
+  <div class="app-layout">
+    <!-- 进度条 -->
+    <Progress class="app-progress" />
+
     <!-- 头部 -->
     <header class="app-header">
       <div class="app-header__content">
@@ -23,23 +26,23 @@
   </div>
 </template>
 
+<script lang="ts" setup>
+import Progress from '@/components/layout/Progress.vue';
+</script>
+
 <style>
-.app-layout--vars {
-  --app-header-height: 64px;
-  --app-sidebar-width: 256px;
-  --app-padding-bottom: 64px;
-  --app-backgroud-color: #fff;
-  /* --app-backgroud-color: #1a1a1a; */
-}
 .app-layout {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   background-color: var(--app-backgroud-color);
 }
+.app-progress {
+  height: var(--app-header-top);
+}
 .app-header {
   position: fixed;
-  top: 0;
+  top: var(--app-header-top);
   left: 0;
   z-index: 20;
   width: 100%;
