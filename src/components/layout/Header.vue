@@ -13,8 +13,8 @@
   </div>
   <div class="header-toolbar">
     <button class="header-link" @click="toggleTheme">
-      <IconMoon v-if="lightColor" />
-      <IconSun v-else />
+      <IconSun v-if="lightColor" title="浅色主题" />
+      <IconMoon v-else title="暗色主题" />
     </button>
     <a class="header-link" target="_blank" href="https://github.com/iocuc/md-docs">
       <IconGithub />
@@ -89,7 +89,7 @@ function toggleTheme() {
   align-items: end;
 }
 .header-link {
-  margin-left: 10px;
+  margin-left: 12px;
   color: rgba(0, 0, 0, 0.6);
 }
 .header-link:hover {

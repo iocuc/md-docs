@@ -7,7 +7,6 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
@@ -27,14 +26,14 @@ function activeClass(to: string) {
 
 <style>
 .app-side-nav {
+  margin-top: 16px;
   list-style: none;
 }
 .app-side-nav-item {
   padding: 4px 8px;
   cursor: pointer;
 }
-.app-side-nav-item--active,
-.app-side-nav-item:hover {
+.app-side-nav-item--active {
   background-color: #f1f1f1;
 }
 .app-side-nav-item a {
@@ -42,5 +41,10 @@ function activeClass(to: string) {
   line-height: 24px;
   color: #676767;
   text-decoration: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.app-side-nav-item a:hover {
+  color: #0366d6;
 }
 </style>
