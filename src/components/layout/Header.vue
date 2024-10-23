@@ -4,7 +4,7 @@
     <span class="header-logo__text">Kola</span>
   </a>
   <button class="header-search">
-    <IconSearch class="header-search__icon" size="22" />
+    <IconSearch class="header-search__icon" size="18" />
     <span class="header-search__text">搜索</span>
     <span class="header-search__key">Crtl+K</span>
   </button>
@@ -48,20 +48,19 @@ const isLoading = useRouteLoading();  // 路由加载状态
   padding: 4px 8px 4px 6px;
   color: #999;
   border-radius: 4px;
+  font-size: 12px;
 }
 .header-search:hover {
   background-color: #f5f5f5;
 }
 .header-search__icon {
-  margin-top: 2px;
+  margin-top: 3px;
 }
 .header-search__text {
   margin: 0 8px 0 4px;
-  font-size: 14px;
 }
 .header-search__key {
   padding: 0 4px;
-  font-size: 12px;
   border-radius: 3px;
   border: 1px solid #e1e1e1;
 }

@@ -1,19 +1,21 @@
 /* 图标 */
 .icon {
   --icon-size: 24px;
+  --icon-color: currentColor;
 
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  letter-spacing: normal;
   width: var(--icon-size);
   min-width: var(--icon-size);
   height: var(--icon-size);
+  color: var(--icon-color);
   line-height: 1;
   text-indent: 0;
   text-align: center;
   user-select: none;
   vertical-align: middle;
+  letter-spacing: normal;
 }
 
 .icon__svg {
