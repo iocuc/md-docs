@@ -9,9 +9,10 @@
     <span class="header-search__key">Crtl+K</span>
   </button>
   <div class="header-nav">
-    {{ isLoading }}
+    <HeaderNav />
   </div>
   <div class="header-toolbar">
+    {{ isLoading }}
     <button class="header-link" @click="toggleTheme">
       <IconMoon v-if="lightColor" />
       <IconSun v-else />
@@ -24,12 +25,13 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import LogoImg from '@/assets/test.jpg';
+import { useRouteLoading } from '@/composables/useGuard';
+import HeaderNav from '@/components/layout/HeaderNav.vue';
 import IconSearch from '@/components/icon/IconSearch.vue';
 import IconGithub from '@/components/icon/IconGithub.vue';
 import IconMoon from '@/components/icon/IconMoon.vue';
 import IconSun from '@/components/icon/IconSun.vue';
-import { useRouteLoading } from '@/composables/useGuard';
+import LogoImg from '@/assets/test.jpg';
 
 const lightColor = ref(true);
 const isLoading = useRouteLoading();  // 路由加载状态
