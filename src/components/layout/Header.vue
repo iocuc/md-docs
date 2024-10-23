@@ -1,7 +1,7 @@
 <template>
   <a href="/">
     <img class="header-logo__img" :src="LogoImg"/>
-    <span class="header-logo__text">Kola</span>
+    <span class="header-logo__text">kola</span>
   </a>
   <button class="header-search">
     <IconSearch class="header-search__icon" size="18" />
@@ -12,6 +12,10 @@
     {{ isLoading }}
   </div>
   <div class="header-toolbar">
+    <button class="header-link" @click="toggleTheme">
+      <IconMoon v-if="lightColor" />
+      <IconSun v-else />
+    </button>
     <a class="header-link" target="_blank" href="https://github.com/iocuc/md-docs">
       <IconGithub />
     </a>
@@ -19,12 +23,21 @@
 </template>
 
 <script lang="ts" setup>
+import { ref } from 'vue';
 import LogoImg from '@/assets/test.jpg';
 import IconSearch from '@/components/icon/IconSearch.vue';
 import IconGithub from '@/components/icon/IconGithub.vue';
+import IconMoon from '@/components/icon/IconMoon.vue';
+import IconSun from '@/components/icon/IconSun.vue';
 import { useRouteLoading } from '@/composables/useGuard';
 
+const lightColor = ref(true);
 const isLoading = useRouteLoading();  // 路由加载状态
+
+function toggleTheme() {
+  const oldValue = lightColor.value;
+  lightColor.value = !oldValue;
+}
 </script>
 
 <style>
@@ -40,6 +53,8 @@ const isLoading = useRouteLoading();  // 路由加载状态
 .header-logo__text {
   margin-left: 4px;
   color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 .header-search {
   display: flex;
@@ -75,6 +90,7 @@ const isLoading = useRouteLoading();  // 路由加载状态
   align-items: end;
 }
 .header-link {
+  margin-left: 10px;
   color: rgba(0, 0, 0, 0.6);
 }
 .header-link:hover {
