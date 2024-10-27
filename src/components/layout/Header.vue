@@ -1,8 +1,8 @@
 <template>
-  <a href="/">
+  <RouterLink to="/">
     <img class="header-logo__img" :src="LogoImg"/>
     <span class="header-logo__text">kola</span>
-  </a>
+  </RouterLink>
   <div class="header-search">
     <IconSearch class="header-search__icon" size="18" />
     <span class="header-search__text">搜索</span>
@@ -12,6 +12,7 @@
     <HeaderNav />
   </div>
   <div class="header-toolbar">
+    <div class="header-toolbar__divider"></div>
     <button class="header-link" @click="toggleTheme">
       <IconSun v-if="isLight" title="浅色主题" />
       <IconMoon v-else title="暗色主题" />
@@ -62,7 +63,7 @@ function toggleTheme() {
 }
 .header-logo__text {
   margin-left: 8px;
-  color: #000;
+  color: var(--app-text-color);
   font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
@@ -70,14 +71,19 @@ function toggleTheme() {
 .header-search {
   display: flex;
   align-items: center;
-  padding: 8px 12px;
+  margin-left: 16px;
+  padding: 6px 12px;
   color: #999;
   font-size: 12px;
-  border-radius: 4px;
   cursor: pointer;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  background-color: var(--header-search-bg);
+  transition: border-color 0.3s ease;
+  user-select: none;
 }
 .header-search:hover {
-  background-color: #f5f5f5;
+  border-color: var(--app-border-color);
 }
 .header-search__icon {
   margin-top: 3px;
@@ -89,23 +95,34 @@ function toggleTheme() {
   padding: 0 6px;
   line-height: 22px;
   border-radius: 3px;
-  border: 1px solid #e1e1e1;
+  border: 1px solid var(--app-border-color);
 }
 .header-nav {
   display: flex;
   flex: 1 1 auto;
   align-items: center;
   align-self: stretch;
+  justify-content: end;
 }
 .header-toolbar {
   display: flex;
   align-items: end;
+  height: 24px;
+}
+.header-toolbar__divider {
+  display: flex;
+  align-self: center;
+  margin-right: 8px;
+  width: 1px;
+  height: 90%;
+  background-color: var(--app-border-color);
 }
 .header-link {
+  display: flex;
   margin-left: 12px;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--header-link-color);
 }
 .header-link:hover {
-  color: #000;
+  color: var(--header-link-color-hover);
 }
 </style>

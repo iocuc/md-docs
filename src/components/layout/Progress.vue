@@ -53,7 +53,7 @@ function complete() {
 }
 .app-progress__bar {
   height: 100%;
-  background-color: #6aa6eb;;
+  background-color: var(--app-link-color);
   transition: width 0.3s ease;
 }
 .app-progress--disabled {

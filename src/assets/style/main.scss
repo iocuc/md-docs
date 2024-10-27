@@ -1,6 +1,2 @@
-@forward './base.scss';
-
-// 第三方库
-@forward './ress.scss';
-@forward './prism.scss';
-@forward './markdown.scss';
+@forward './_variable.scss';
+@forward './_base.scss';

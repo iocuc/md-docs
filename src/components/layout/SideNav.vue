@@ -1,6 +1,6 @@
 <template>
   <ul class="app-side-nav">
-    <li v-for="item in items" class="app-side-nav-item" :class="activeClass(item.to)">
+    <li v-for="item in items":class="activeClass(item.to)">
       <router-link :to="item.to">{{ item.title }}</router-link>
     </li>
   </ul>
@@ -20,7 +20,7 @@ const items = [
 
 function activeClass(to: string) {
   const isActive = route.fullPath === to;
-  return { 'app-side-nav-item--active': isActive };
+  return { 'app-side-nav--active': isActive };
 }
 </script>
 
@@ -29,11 +29,11 @@ function activeClass(to: string) {
   margin-top: 16px;
   list-style: none;
 }
-.app-side-nav-item {
+.app-side-nav li {
   padding: 4px 8px;
   cursor: pointer;
 }
-.app-side-nav-item a {
+.app-side-nav li a {
   display: block;
   line-height: 24px;
   color: #676767;
@@ -41,11 +41,10 @@ function activeClass(to: string) {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.app-side-nav-item a:hover {
+.app-side-nav li a:hover {
   color: #3451b2;
 }
-.app-side-nav-item--active,
-.app-side-nav-item--active a {
+.app-side-nav--active a {
   color: #3451b2;
   background-color: #f1f1f1;
 }

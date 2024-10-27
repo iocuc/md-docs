@@ -54,7 +54,7 @@ import Progress from '@/components/layout/Progress.vue';
   padding: 0 24px;
   height: var(--app-header-height);
   white-space: nowrap;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--app-border-color);
   background-color: var(--app-backgroud-color);
 }
 .app-sidebar {
@@ -65,10 +65,10 @@ import Progress from '@/components/layout/Progress.vue';
   z-index: 1;
   width: var(--app-sidebar-width);
   max-width: 100%;
-  border-right: 1px solid #ccc;
-  transform: translate(0);
   overflow-x: hidden;
   overflow-y: auto;
+  border-right: 1px solid var(--app-border-color);
+  transform: translate(0);
   transition: border-color .5s,background-color .5s;
 }
 .app-sidebar__content {

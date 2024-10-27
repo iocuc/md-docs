@@ -1,0 +1,31 @@
+#app {
+  --app-header-top: 3px;
+  --app-header-height: 64px;
+  --app-sidebar-width: 256px;
+  --app-padding-bottom: 64px;
+}
+
+#app,
+#app[theme="light"] {
+  --app-text-color: #333;
+  --app-link-color: #3451b2; 
+  --app-border-color: #e2e2e2;
+  --app-backgroud-color: #fff;
+
+
+  --header-search-bg: #f5f5f5;
+  --header-link-color: rgba(0, 0, 0, 0.6);
+  --header-link-color-hover: rgba(0, 0, 0, 1);
+}
+
+#app[theme="dark"] {
+  --app-text-color: #e1e1e1;
+  --app-link-color: #a8b1ff;
+  --app-border-color: #2e2e2e;
+  --app-backgroud-color: #1a1a1a;
+
+  --header-search-bg: #000; 
+  --header-link-color: rgba(255, 255, 255, 0.6);
+  --header-link-color-hover: rgba(255, 255, 255, 1);
+}
+
