@@ -33,9 +33,6 @@ function activeClass(to: string) {
   padding: 4px 8px;
   cursor: pointer;
 }
-.app-side-nav-item--active {
-  background-color: #f1f1f1;
-}
 .app-side-nav-item a {
   display: block;
   line-height: 24px;
@@ -45,6 +42,11 @@ function activeClass(to: string) {
   overflow: hidden;
 }
 .app-side-nav-item a:hover {
-  color: #0366d6;
+  color: #3451b2;
+}
+.app-side-nav-item--active,
+.app-side-nav-item--active a {
+  color: #3451b2;
+  background-color: #f1f1f1;
 }
 </style>

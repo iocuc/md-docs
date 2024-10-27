@@ -8,7 +8,7 @@
 import { ref, computed, watch } from 'vue';
 import { useRouteLoading } from '@/composables/useGuard';
 
-let interval = null;
+let interval: any = null;
 const delay = 300;      // 延迟重置时间
 const maxPercent = 75;  // 模拟的最大进度
 
@@ -43,9 +43,13 @@ function complete() {
 
 <style>
 .app-progress {
-  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
   width: 100%;
-  background-color: transparent;
+  overflow: hidden;
+  background-color: var(--app-backgroud-color);
 }
 .app-progress__bar {
   height: 100%;
