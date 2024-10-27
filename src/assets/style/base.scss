@@ -1,0 +1,18 @@
+#app {
+  --app-header-top: 3px;
+  --app-header-height: 64px;
+  --app-sidebar-width: 256px;
+  --app-padding-bottom: 64px;
+}
+
+#app,
+#app[theme="light"] {
+  --app-text-color: #000;
+  --app-backgroud-color: #fff;
+}
+
+#app[theme="dark"] {
+  --app-text-color: #e1e1e1;
+  --app-backgroud-color: #1a1a1a;
+}
+

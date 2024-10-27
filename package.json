@@ -19,6 +19,7 @@
     "@vitejs/plugin-vue": "^5.0.5",
     "cross-env": "^7.0.3",
     "markdown-it-prism": "^2.3.0",
+    "sass": "^1.80.4",
     "typescript": "^5.5.3",
     "unplugin-vue-components": "^0.27.2",
     "unplugin-vue-markdown": "^0.26.2",

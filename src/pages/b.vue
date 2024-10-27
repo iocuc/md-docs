@@ -1,6 +1,6 @@
 <template>
   <p>Hello I am B</p>
-  <img src="../assets/test.jpg" alt="">
+  <img src="../assets/img/test.jpg" alt="">
 </template>
 
 <script lang="ts">
