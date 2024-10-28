@@ -52,11 +52,16 @@ function activeClass(to: string) {
   height: 1px;
   content: '';
   background-color: transparent;
+  transform: scaleX(0); 
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .app-header-nav li.active::after {
   background-color: var(--app-link-color);
+  transform: scaleX(1);
 }
 .app-header-nav li a {
+  display: flex;
+  align-items: center;
   padding: 0 12px;
   height: 100%;
   color: currentColor;
