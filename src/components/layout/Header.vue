@@ -3,14 +3,8 @@
     <img class="header-logo__img" :src="LogoImg"/>
     <span class="header-logo__text">kola</span>
   </RouterLink>
-  <div class="header-search">
-    <IconSearch class="header-search__icon" size="18" />
-    <span class="header-search__text">搜索</span>
-    <span class="header-search__key">Crtl+K</span>
-  </div>
-  <div class="header-nav">
-    <HeaderNav />
-  </div>
+  <HeaderSearch />
+  <HeaderNav />
   <div class="header-toolbar">
     <div class="header-toolbar__divider"></div>
     <button class="header-link" @click="toggleTheme">
@@ -25,8 +19,8 @@
 
 <script lang="ts" setup>
 import { ref, computed, watch, onMounted, nextTick } from 'vue';
+import HeaderSearch from '@/components/layout/HeaderSearch.vue';
 import HeaderNav from '@/components/layout/HeaderNav.vue';
-import IconSearch from '@/components/icon/IconSearch.vue';
 import IconGithub from '@/components/icon/IconGithub.vue';
 import IconMoon from '@/components/icon/IconMoon.vue';
 import IconSun from '@/components/icon/IconSun.vue';
@@ -67,42 +61,6 @@ function toggleTheme() {
   font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
-}
-.header-search {
-  display: flex;
-  align-items: center;
-  margin-left: 16px;
-  padding: 6px 12px;
-  color: #999;
-  font-size: 12px;
-  cursor: pointer;
-  border-radius: 6px;
-  border: 1px solid transparent;
-  background-color: var(--header-search-bg);
-  transition: border-color 0.3s ease;
-  user-select: none;
-}
-.header-search:hover {
-  border-color: var(--app-link-color);
-}
-.header-search__icon {
-  margin-top: 3px;
-}
-.header-search__text {
-  margin: 0 8px 0 4px;
-}
-.header-search__key {
-  padding: 0 6px;
-  line-height: 22px;
-  border-radius: 3px;
-  border: 1px solid var(--app-border-color);
-}
-.header-nav {
-  display: flex;
-  flex: 1 1 auto;
-  align-items: center;
-  align-self: stretch;
-  justify-content: end;
 }
 .header-toolbar {
   display: flex;
