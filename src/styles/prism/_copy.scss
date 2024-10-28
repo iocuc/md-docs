@@ -1,0 +1,30 @@
+//  代码复制按钮
+.m-mdic-copy-wrapper {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: space-between;
+  font: 12px/18px system-ui;
+  color: #666;
+  opacity: .5
+}
+
+.m-mdic-copy-wrapper div.u-mdic-copy-notify {
+  display: none;
+  margin: 0 8px 0 auto
+}
+
+.m-mdic-copy-wrapper button.u-mdic-copy-btn {
+  opacity: .5;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  background: 0 0;
+  transition: opacity .2s
+}
+
+.m-mdic-copy-wrapper button.u-mdic-copy-btn:hover {
+  opacity: 1
+}

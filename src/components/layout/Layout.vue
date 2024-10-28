@@ -69,7 +69,6 @@ import Progress from '@/components/layout/Progress.vue';
   overflow-y: auto;
   border-right: 1px solid var(--app-border-color);
   transform: translate(0);
-  transition: border-color .5s,background-color .5s;
 }
 .app-sidebar__content {
   padding: 0 16px var(--app-padding-bottom) 16px;

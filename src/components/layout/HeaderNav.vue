@@ -21,7 +21,7 @@ const items = [
 
 function activeClass(to: string) {
   const isActive = route.fullPath === to;
-  return { 'app-header-nav--active': isActive };
+  return { 'active': isActive };
 }
 </script>
 
@@ -32,23 +32,34 @@ function activeClass(to: string) {
   height: 100%;
   list-style: none;
 }
-.app-header-nav li,
-.app-header-nav li a {
+.app-header-nav li {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.app-header-nav li:hover,
+.app-header-nav li.active {
+  color: var(--app-link-color);
+}
+.app-header-nav li.active {
+  font-weight: bold;
+}
+.app-header-nav li::after {
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  height: 1px;
+  content: '';
+  background-color: transparent;
+}
+.app-header-nav li.active::after {
+  background-color: var(--app-link-color);
+}
 .app-header-nav li a {
   padding: 0 12px;
   height: 100%;
-  color: var(--app-text-color);
+  color: currentColor;
   text-decoration: none;
-}
-.app-header-nav li a:hover {
-  color: var(--app-link-color);
-}
-li.app-header-nav--active a {
-  font-weight: bold;
-  color: var(--app-link-color);
 }
 </style>
