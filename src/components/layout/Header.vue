@@ -83,7 +83,7 @@ function toggleTheme() {
   user-select: none;
 }
 .header-search:hover {
-  border-color: var(--app-border-color);
+  border-color: var(--app-link-color);
 }
 .header-search__icon {
   margin-top: 3px;

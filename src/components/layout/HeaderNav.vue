@@ -37,6 +37,7 @@ function activeClass(to: string) {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--app-text-color);
 }
 .app-header-nav li:hover,
 .app-header-nav li.active {
@@ -53,6 +54,7 @@ function activeClass(to: string) {
   content: '';
   background-color: transparent;
   transform: scaleX(0); 
+  transform-origin: left;  /* 设置动画从左开始 */
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .app-header-nav li.active::after {
