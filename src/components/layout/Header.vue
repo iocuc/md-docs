@@ -30,7 +30,7 @@ import IconSearch from '@/components/icon/IconSearch.vue';
 import IconGithub from '@/components/icon/IconGithub.vue';
 import IconMoon from '@/components/icon/IconMoon.vue';
 import IconSun from '@/components/icon/IconSun.vue';
-import LogoImg from '@/assets/img/test.jpg';
+import LogoImg from '@/assets/imgs/test.jpg';
 
 const theme = ref('light');
 let appEl: HTMLElement | null = null;
